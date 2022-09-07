@@ -1,0 +1,105 @@
+#mp3YoutubeDonwloadButton button{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border-radius: 15%;
+    border: none;
+    font-weight: 600;
+}
+
+#mp3Wrapper{
+    position: absolute;
+    z-index: 9999;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white !important;
+    padding: 15px;
+    background-color: rgb(15, 9, 9) !important;
+    font-weight: 600 !important;
+    display: none;
+    width: 300px;
+    height: auto;
+}
+#mp3Wrapper p{
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 1.55rem;
+    text-align: center;
+}
+#mp3Wrapper input{
+    font-size: 2.25rem;
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 30%;
+    color: white;
+    margin: 10px;
+}
+#mp3Wrapper .text{
+    margin-bottom: 15px;
+}
+#mp3Wrapper #serverMessage{
+    font-size: 1.5rem;
+    color: white;
+}
+#mp3Wrapper #inputs{
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+#mp3Wrapper #confirmDownload{
+    display: block;
+    width: 100%;
+}
+#mp3Wrapper #download{
+    flex: right;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(48, 23, 82);
+    color: white;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+#mp3Wrapper #sliderDash{
+    font-size: 2.5rem;
+}
+
+#time-slider{
+    width: 70%;
+    margin-left: 15%;
+}
+
+#time-range {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+#time-range span {
+user-select: none;
+}
+#time-range #time-slider {
+margin: 5%;
+}
+#time-range #time-slider .ui-slider {
+background-color: white;
+border-color: white;
+}
+#time-range #time-slider .ui-slider .ui-slider-handle {
+border-radius: 50%;
+border: 1px solid rgb(255, 246, 246);
+background-color: white;
+}
+#time-range #time-slider .ui-slider .ui-slider-range .ui-corner-all .ui-widget-header {
+background-color: blue;
+border-color: blue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
