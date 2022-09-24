@@ -11,7 +11,7 @@ if(window.location.href.indexOf("watch") > -1){
     const YtNav = "top-level-buttons-computed";
     // these are youtube default classes for button
     const NewButton = `
-<div id="mp3YoutubeDonwloadButton">
+<div id="mp3YoutubeDownloadButton">
 <button><i class="icon-download-alt">
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -21,13 +21,12 @@ if(window.location.href.indexOf("watch") > -1){
 </svg>
 </i> Pobierz MP3</button>
 </div>
-<form id="mp3Wrapper" target="_blank" method="get" action="https://dominiksliwek.ddns.net/ytDownloader">
+<form id="mp3Wrapper" target="_blank" method="get" action="https://dominiksliwek.ddns.net/ytDownloaderPHP">
 <div class="text">
     <p>Wybierz przedział czasowy jaki chcesz pobrać</p>
 </div>
 <div id="time-range">
     <div id="inputs">
-      <input type="hidden" name="url" id="mp3_youtube_url" value=""/>
       <input name="start" id="time-min" type="number" step="1" required value="0">
       <span id="sliderDash">-</span>
       <input name="end" id="time-max" type="number" step="1" required value=""></div>
@@ -36,6 +35,9 @@ if(window.location.href.indexOf("watch") > -1){
 <div id="confirmDownload">
   <input type="submit" value="Pobierz" id="download">
 </div>
+<div><input type="hidden" name="url" id="mp3_youtube_url"/></div>
+<div><input type="hidden" name="name" id="mp3_youtube_name"/></div>
+<div><input type="hidden" name="max_length" id="mp3_youtube_max_length"/></div>
 <div id="serverMessage"></div>
 </form>
 `;

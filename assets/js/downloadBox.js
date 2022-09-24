@@ -1,6 +1,6 @@
 // on click append box with movie downloader
 // show download wrapper button
-$(document).on('click', "#mp3YoutubeDonwloadButton", function(){
+$(document).on('click', "#mp3YoutubeDownloadButton > button", function(){
     $("#mp3Wrapper").css({
         'position': 'absolute',
         'left': $(this).offset().left,
@@ -12,8 +12,12 @@ $(document).on('click', "#mp3YoutubeDonwloadButton", function(){
 
 // on submiting form update current url video param
 $(document).on('submit', "#mp3Wrapper", function(){
+    // add video url
     $("#mp3_youtube_url").val(window.location.href);
-    
+    // add video title, trim extra spaces 
+    $("#mp3_youtube_name").val($(".title").text().replace(/\s+/g,' ').trim());
+    // set max video length
+    $("#mp3_youtube_max_length").val(Math.round(document.getElementsByTagName('video')[0].duration));
     return true;
 })
 
